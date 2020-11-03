@@ -6,7 +6,7 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
 
             Console.Write("Quantos valores você quer? ");
             int quantosValores = int.Parse(Console.ReadLine());
@@ -17,6 +17,10 @@ namespace Generics
                 int valorX = int.Parse(Console.ReadLine());
                 printService.AddValor(valorX);
             }
+            
+            //int a = printService.Primeiro(); 
+            //int soma = a + 2;
+            //Console.WriteLine(soma);
 
             printService.Print();
             Console.WriteLine();

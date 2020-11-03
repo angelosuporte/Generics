@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Generics
 {
-    class PrintService
+    class PrintService<T>
     {
-        private int[] _valores = new int[10];
+        private T[] _valores = new T[10];
         private int _contador = 0;
 
-        public void AddValor(int valor)
+        public void AddValor(T valor)
         {
             if (_contador == 10) 
             {
@@ -19,7 +17,7 @@ namespace Generics
             _contador++;
         }
 
-        public int Primeiro()
+        public T Primeiro()
         {
             if (_contador == 0)
             {
